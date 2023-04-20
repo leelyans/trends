@@ -1,0 +1,64 @@
+/* Default styles for light mode */
+.navbar {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.header {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.footer {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+/* Dark mode styles */
+.navbar.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.header.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.dark-mode {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.footer.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Media query to detect dark mode */
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  .header {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  body {
+    background-color: #222222;
+    color: #ffffff;
+  }
+  
+  .footer {
+    background-color: #000000;
+    color: #ffffff;
+  }
+}
