@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Trends Education Publishers</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Book publishers" name="keywords">
+    <meta content="Trends Education Publishers" name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo 1-Head.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom Stylesheet for Header -->
+    <style>
+
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #ffffff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            padding: 15px 0;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-family: 'Oswald', sans-serif;
+            color: #007bff;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .navbar .logo img {
+            max-width: 300px;
+            max-height: 200PX;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .navbar ul li a {
+            display: block;
+            padding: 10px 15px;
+            font-size: 18px;
+            color: #333333;
+            text-decoration: none;
+        }
+
+        .navbar ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Header Styles */
+        .header {
+            background-image: url('img/head1.jpg'); /* Replace with your image link */
+            background-size: cover;
+            background-position: center center;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 70px; /* Add margin to adjust for fixed navbar */
+        }
+
+        .header h1 {
+            font-size: 48px;
+            font-family: 'Oswald', sans-serif;
+            color: #ffffff;
+            margin-bottom: }
+
+        .header h1 {
+            font-size: 48px;
+            font-family: 'Oswald', sans-serif;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .header p {
+            font-size: 18px;
+            font-family: 'Rubik', sans-serif;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+
+        .header .cta {
+            display: inline-block;
+            font-size: 18px;
+            font-family: 'Rubik', sans-serif;
+            color: #ffffff;
+            background-color: #007bff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 15px;
+            transition:transform 0.3s, background-color 0.3s ease-in-out;
+        }
+
+        .header .cta:hover {
+            background-color: #0056b3;
+            transform: translateY(10px);
+        }
+        #cta {
+            display: inline-block;
+            font-size: 18px;
+            font-family: 'Rubik', sans-serif;
+            color: #ffffff;
+            background-color: #007bff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 15px;
+            transition:transform 0.3s, background-color 0.3s ease-in-out;
+        }
+
+        #cta2:hover {
+            background-color: #0056b3;
+            transform: translateY(10px);
+        }
+
+                #cta {
+            display: inline-block;
+            background-color: #007bff;
+      
+            text-decoration: none;
+            border-radius: 15px;
+            transition:transform 0.3s, background-color 0.3s ease-in-out;
+        }
+
+        #cta2:hover {
+            background-color: #0056b3;
+            transform: translateY(5px);
+        }
+
+
+       
+.portfolio-item {
+    animation: fade-in 1s ease;
+}
+
+.portfolio-summary {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-summary {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Trends Education Publishers"></a>
+            </div>
+            <ul>
+                <li class="active"><a href="index.html" >Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="authors.html">Authors</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="d-none d-lg-flex align-items-center pl-4">
+                    <i class="fa fa-2x fa-mobile-alt text-primary mr-3"></i>
+                    <div>
+                        <h6 class="text-body text-uppercase mb-1"><small>Call Anytime</small></h6>
+                        <h6 class="m-0">+250 788 312 723</h6> 
+                        <h6 class="m-0">+250 788 312 460</h6>
+                    </div>
+                </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home" class="header">
+        <div class="container" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000" >
+            <h1 class="">Welcome to Trends Education Publishers</h1>
+            <p class="">Discover the latest and greatest books from our talented authors</p>
+            <a href="books.html" class="cta">Explore Books</a>
+        </div>
+    </header>
+    
+
+
+ <!-- About Start -->
+   <div class="container-fluid pt-5 mt-5" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000" data-aos-anchor=".trigger1">
+        <div class="container mt-5 pt-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 " class="image-container" >
+                    <div class="trigger1"></div>
+                    <div class="image-container">
+  <img class="first-image" src="img/about1.png" alt="Image 1">
+  <img class="second-image" src="img/about2.png" alt="Image 2">
+  <img class="third-image" src="img/about3.png" alt="Image 3">
+</div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h1 class="display-4 text-uppercase mb-4">BEST CHILDREN'S BOOK IN TOWN</h1>
+                    <h5 class="text-uppercase text-primary mb-3">TRENDS EDUCATION PUBLISHERS: Where Imagination Comes to Life in Children's Books!</h5>
+                    <p class="mb-4">Trends Education Publisher Limited was founded in 2017 by a passionate Author and children's book enthusiast who wanted to provide children with access to high-quality, diverse literature. Over the years, we have grown to become a trusted publisher of children's books, with a strong reputation for producing award-winning titles. <br> At Trends education Publishers Limited, we publish a wide variety of books for children of all ages, from board books for infants and toddlers to chapter books for older readers. Our titles include picture books, early readers, middle-grade books, and young adult novels, and cover a range of genres, including fiction, non-fiction, and poetry.</p>
+                    <a href="about.html" class="btn btn-primary text-uppercase py-3 px-5" id="cta">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+
+    <!-- Portfolio Start -->
+    <div class="container-fluid  mt-5 py-5">
+    <div class="container pt-5 pb-3 mt-5">
+        <div data-aos="fade-down" data-aos-delay="20" data-aos-duration="500">
+        <h1 class="display-4 text-uppercase text-center mb-1" style="font-family: 'Roboto', sans-serif;">Our Books</h1>
+        <h6 class="display-6 text-uppercase text-center mb-5" style="font-family: 'Roboto', sans-serif;">Check out one of our best books from our best authors.</h6>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center mb-2" data-aos="fade-left" data-aos-delay="40" data-aos-duration="1000">
+                <ul class="list-inline mb-4" id="portfolio-flters">
+                    <li class="btn btn-outline-dark text-uppercase py-2 px-4">
+                        
+                        <a href="books.html" style="font-family: 'Roboto', sans-serif;">
+                            <i class="fas fa-star text-primary mr-2"></i>All
+                        </a>
+                    </li>
+                    <li class="btn btn-outline-dark text-uppercase py-2 px-4 active" data-filter=".first">
+                        <i class="fas fa-pencil-alt text-primary mr-2"></i>PRE-PRIMARY
+                    </li>
+                   
+                    <li class="btn btn-outline-dark text-uppercase py-2 px-4" data-filter=".second">
+                        <i class="fas fa-book-reader text-primary mr-2"></i>LOWER PRIMARY
+                    </li>
+                    <li class="btn btn-outline-dark text-uppercase py-2 px-4" data-filter=".third">
+                        <i class="fas fa-chalkboard-teacher text-primary mr-2"></i>UPPER PRIMARY
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+            <div class="row portfolio-container">
+    <div class="col-lg-4 col-md-6 mb-4 portfolio-item third" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500">
+        <div class="position-relative rounded overflow-hidden mb-2">
+            <img class="img-fluid w-100" src="img/covers/Cover (72).jpg" alt="">
+            <div class=" d-flex align-items-center justify-content-center">
+                    </div>
+            <div class="portfolio-summary">
+                <p  id="nametr">The Fountain of Wisdom “The Fountain of Wisdom” is a collection of poems edited and published by Nsigaye Andrew that teaches fundamental values to young readers. The book is designed to help children understand and practice values
+such as honesty, kindness, respect, and responsibility, which are important for their personal development and success.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4 portfolio-item first" data-aos="fade-down" data-aos-delay="50" data-aos-duration="600">
+        <div class="position-relative rounded overflow-hidden mb-2">
+            <img class="img-fluid w-100" src="img/covers/Cover (69).jpg" alt="">
+            <div class=" d-flex align-items-center justify-content-center">
+                    </div>
+            <div class="portfolio-summary">
+                <p id="nametr">The story clearly demonstrates of how Zigama learned about saving and investing from his grandfather. We can all learn from his example and start saving and investing our money to become successful too. Saving and investing money is a marathon, not a sprint. It requires patience, discipline, and a long-term view. By following these tips and staying committed to your financial goals, you can build a solid financial foundation for yourself and your future.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4 portfolio-item first" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500">
+        <div class="position-relative rounded overflow-hidden mb-2">
+            <img class="img-fluid w-100" src="img/covers/Cover (64).jpg" alt="">
+            <div class=" d-flex align-items-center justify-content-center">
+                    </div>
+            <div class="portfolio-summary">
+                <p id="nametr">The story of the little bunny with good
+manners; is a manifestation that sharing
+with friends eased his life, learnt to be
+thankful always remembering the wise old
+owl’s teaching.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4 portfolio-item third" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500">
+        <div class="position-relative rounded overflow-hidden mb-2">
+            <img class="img-fluid w-100" src="img/covers/Cover (71).jpg" alt="">
+            <div class=" d-flex align-items-center justify-content-center">
+                    </div>
+            <div class="portfolio-summary">
+                <p id="nametr">Will, forgiveness and faith. The spirit of I can do, an act of goodwill, keeps your hands
+from clenching. It takes practice to actually operate from a positive mindset, rather than just conceptually understanding that
+it’s a good idea to do so. In my experience, a lot of this practice can happen on the level of reframing verbal This in turn will shift your thoughts and that is the power of a positive mind. The good thing about having    
+a positive mind is that it makes people feel like they can achieve anything that they want in life.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4 portfolio-item second" data-aos="fade-down" data-aos-delay="50" data-aos-duration="600">
+        <div class="position-relative rounded overflow-hidden mb-2">
+            <img class="img-fluid w-100" src="img/covers/Cover (68).jpg" alt="">
+            <div class=" d-flex align-items-center justify-content-center">
+                    </div>
+            <div class="portfolio-summary">
+                <p id="nametr">The story of Ubumwe is a powerful reminder
+of the strength of the human spirit and the
+importance of standing up for what is right.
+It is a story of bravery, determination and
+unwavering commitment to one’s values,
+even in the face of adversity</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4 portfolio-item second" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500">
+        <div class="position-relative rounded overflow-hidden mb-2">
+            <img class="img-fluid w-100" src="img/covers/Cover (67).jpg" alt="">
+            <div class=" d-flex align-items-center justify-content-center">
+                    </div>
+            <div class="portfolio-summary">
+                <p id="nametr">Reading is a gift is about children who
+were no longer afraid of books – they were
+excited to read and learn from them And
+Darlene, who had once been an outcast for
+her love of reading, was now a mentor in
+the eyes of the other children.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Add more portfolio items with summaries as needed -->
+</div>
+
+        </div>
+    </div>
+    <!-- Portfolio End -->
+
+    <!-- Team Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
+        <h1 class="display-4 text-uppercase text-center mb-2" style="font-family: 'Montserrat', sans-serif;">Featured Authors</h1>
+        <h6 class="display-7 text-uppercase text-center mb-5" style="font-family: 'Montserrat', sans-serif;">Meet some of our best authors here at Trends Education Publishers Ltd</h6>
+        </div>
+
+        <div class="owl-carousel team-carousel position-relative" style="padding-left: 30px;">
+            <div class="team-item rounded overflow-hidden">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="img/authors/author (1).jpeg" alt="">
+                </div>
+                <div class="bg-light text-center p-4">
+                    <h4 class="text-uppercase" style="font-family: 'Lato', sans-serif;">NSIGAYE Andrew</h4>
+                    <p class="m-0" style="font-family: 'Lato', sans-serif;">CEO, Founder, Author</p>
+                </div>
+            </div>
+            <div class="team-item rounded overflow-hidden">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="img/authors/author (2).jpeg" alt="">
+                </div>
+                <div class="bg-light text-center p-4">
+                    <h4 class="text-uppercase" style="font-family: 'Lato', sans-serif;">NSIGAYE Eran Manzi</h4>
+                    <p class="m-0" style="font-family: 'Lato', sans-serif;">Author</p>
+                </div>
+            </div>
+            <div class="team-item rounded overflow-hidden">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="img/authors/author (5).jpeg" alt="">
+                </div>
+                <div class="bg-light text-center p-4">
+                    <h4 class="text-uppercase" style="font-family: 'Lato', sans-serif;">NSIGAYE Ryan Isonga</h4>
+                    <p class="m-0" style="font-family: 'Lato', sans-serif;">Author</p>
+                </div>
+            </div>
+            <div class="team-item rounded overflow-hidden">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="img/authors/author (3).jpeg" alt="">
+                </div>
+                <div class="bg-light text-center p-4">
+                    <h4 class="text-uppercase" style="font-family: 'Lato', sans-serif;">NSIGAYE Darlene Isimbi</h4>
+                    <p class="m-0" style="font-family: 'Lato', sans-serif;">Author</p>
+                </div>
+            </div>
+            <div class="team-item rounded overflow-hidden">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="img/authors/author (4).jpeg" alt="">
+                </div>
+                <div class="bg-light text-center p-4">
+                    <h4 class="text-uppercase" style="font-family: 'Lato', sans-serif;">KAGARA Jane Mbabazi</h4>
+                    <p class="m-0" style="font-family: 'Lato', sans-serif;">Author</p>
+                </div>
+            </div>
+            <div class="team-item rounded overflow-hidden">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="img/authors/author (7).jpeg" alt="">
+                </div>
+                <div class="bg-light text-center p-4">
+                    <h4 class="text-uppercase" style="font-family: 'Lato', sans-serif;">SIBOBUGINGO Jean Pierre</h4>
+                    <p class="m-0" style="font-family: 'Lato', sans-serif;">Designer and Illustrator</p>
+                </div>
+            </div>
+                    
+            </div>
+        </div>
+    </div>
+</body>
+
+    
+
+      
+<!-- Footer Start -->
+<footer class="container-fluid bg-dark text-light " style="margin-top: 20px;">
+    <div class="row pt-5">
+        <div class="col-sm-4" data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000">
+            <h5 class="text-uppercase text-light mb-4">TRENDS EDUCATION PUBLISHERS</h5>
+            <p>Dedicated to delivering high-quality books and empowering authors to share their unique voices with the world.</p>
+                    <div class="d-flex justify-content-start">
+                <a class="btn btn-sm btn-primary btn-sm-square mr-2 ml-10animated-hover"  id="cta2" href="https://twitter.com/TrendsEducation?t=HS4tWaArvNUjpelysfeCdw&s=08"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-sm btn-primary btn-sm-square mr-2 animated-hover" id="cta2"  href="https://www.facebook.com/profile.php?id=100068149324943&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-sm btn-primary btn-sm-square mr-2 animated-hover"  id="cta2" href="https://www.linkedin.com/in/andrew-nsigaye-95425727"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-sm btn-primary btn-sm-square animated-hover"  id="cta2" href="https://instagram.com/trendseducationpublishers?igshid=MjljNjAzYmU="><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="col-sm-4 ml-6" data-aos="fade-right" data-aos-delay="70" data-aos-duration="1000">
+            <h5 class="text-uppercase text-light mb-4">Quick Links</h5>
+            <div class="d-flex flex-column justify-content-start">
+                <a class="text-light-50 mb-1" href="index.html"><i class="fa fa-angle-right text-light mr-2"></i>Home</a>
+                <a class="text-light-50 mb-1" href="books.html"><i class="fa fa-angle-right text-light mr-2"></i>Books</a>
+                <a class="text-light-50 mb-1" href="authors.html"><i class="fa fa-angle-right text-light mr-2"></i>Authors</a>
+                <a class="text-light-50 mb-1" href="about.html"><i class="fa fa-angle-right text-light mr-2"></i>About Us</a>
+                <a class="text-light-50" href="contact.html"><i class="fa fa-angle-right text-light mr-2"></i>Contact Us</a>
+            </div>
+        </div>
+        <div class="col-sm-4 ml-0" data-aos="fade-right" data-aos-delay="50" data-aos-duration="5000">
+            <h5 class="text-uppercase text-light mb-4">Get In Touch</h5>
+            <p>You can visit us on our social medias or reach out to us through a call or email.</p>
+            <p><i class="fa fa-map-marker-alt text-light mr-2"></i>Kigali, Kimironko, KG 38 St<br>
+            <i class="fa fa-phone-alt text-light mr-2"></i>+250 788 312 723, +250 788 312 460<br>
+            <i class="fa fa-envelope text-light mr-2"></i>trendseducationpublishers1@gmail.com</p>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-light btn-lg-square back-to-top"><i class="fa fa-angle-up"></i></a>
+
+   
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        delay: 50, // values from 0 to 3000, with step 50ms
+  duration: 3000, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, //
+    });
+
+ 
+  </script>
+
+
+
+</html>
